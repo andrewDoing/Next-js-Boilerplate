@@ -9,15 +9,23 @@
     "prettier/prettier": [
       "error",
       {
-        "singleQuote": true
+        "singleQuote": true,
+        "endOfLine": "auto"
       }
     ]
   },
   "overrides": [
     // Configuration for TypeScript files
     {
-      "files": ["**/*.ts", "**/*.tsx"],
-      "plugins": ["@typescript-eslint", "unused-imports", "tailwindcss"],
+      "files": [
+        "**/*.ts",
+        "**/*.tsx"
+      ],
+      "plugins": [
+        "@typescript-eslint",
+        "unused-imports",
+        "tailwindcss"
+      ],
       "extends": [
         "plugin:tailwindcss/recommended",
         "airbnb-typescript",
@@ -43,7 +51,11 @@
         "import/order": [
           "error",
           {
-            "groups": ["builtin", "external", "internal"],
+            "groups": [
+              "builtin",
+              "external",
+              "internal"
+            ],
             "pathGroups": [
               {
                 "pattern": "react",
@@ -51,7 +63,9 @@
                 "position": "before"
               }
             ],
-            "pathGroupsExcludedImportTypes": ["react"],
+            "pathGroupsExcludedImportTypes": [
+              "react"
+            ],
             "newlines-between": "always",
             "alphabetize": {
               "order": "asc",
@@ -72,7 +86,9 @@
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": [
           "error",
-          { "argsIgnorePattern": "^_" }
+          {
+            "argsIgnorePattern": "^_"
+          }
         ]
       }
     }
